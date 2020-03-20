@@ -1,2 +1,18 @@
-class MapsController < ApplicationController
-end
+  class MapsController < ApplicationController
+
+  def new
+    @map = Map.new # フォーム用の空のインスタンスを生成する。
+  end
+
+  def create
+    @map = Map.new(map_params) # ストロングパラメータを引数に
+    @map.apsave # saveをしてデータベースに保存する。
+    redirect_to @map # showページにリダイレクト
+  end
+
+  private
+
+  def map_params # ストロングパラメータを定義する
+    params.require(:map).permit(:caption)
+  end
+  end
