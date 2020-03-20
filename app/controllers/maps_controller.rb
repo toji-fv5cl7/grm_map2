@@ -14,5 +14,6 @@
 
   def map_params # ストロングパラメータを定義する
     params.require(:map).permit(:caption)
+    params.require(:map).permit(:caption, :image)
   end
   end
