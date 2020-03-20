@@ -1,2 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
+
+  @import '~bootstrap/scss/bootstrap';
+  @import "~@fortawesome/fontawesome-free/scss/fontawesome";
+
+.scroll {
+  overflow: scroll;
+  max-height: 490px;
+}
