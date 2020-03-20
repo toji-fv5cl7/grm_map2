@@ -3,12 +3,12 @@ unless Rails.env.production?
   MAP_MAX = 10
 
   # Proc.newでその後の配列をオブジェクトとしてpost_attrsに代入
-  maps_attrs = Proc.new do
+  map_attrs = Proc.new do
     # Array.newでその後の内容を配列としてオブジェクト化する準備
     Array.new(MAP_MAX) do |idx|
       { id: idx + 1,
         # Fakerを使って文言を用意
-        caption: Faker::Lorem.paragraph
+        photo1: Faker::Lorem.paragraph
       }
     end
   end
